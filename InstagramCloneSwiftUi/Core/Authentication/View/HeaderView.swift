@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct HeaderView: View {
+    var refreshAction: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Instagram")
+                .font(.title)
+                .fontWeight(.bold)
+            Spacer()
+            Button(action: {
+                refreshAction()
+            }) {
+                Image(systemName: "arrow.clockwise") 
+                    .font(.title)
+            }
+            .padding()
+            .background(Circle().fill(Color.gray.opacity(0.2)))
+        }
+        .padding()
     }
-}
-
-#Preview {
-    HeaderView()
 }

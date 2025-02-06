@@ -5,14 +5,32 @@
 //  Created by Tornike Eristavi on 05.02.25.
 //
 
+
 import SwiftUI
 
 struct InputView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @Binding var text: String
+    var Title: String
+    var placeholder: String
+    var isSecureField: Bool = false
 
-#Preview {
-    InputView()
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(Title)
+                .font(.caption)
+                .foregroundColor(.gray)
+            
+            if isSecureField {
+                SecureField(placeholder, text: $text)
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+            } else {
+                TextField(placeholder, text: $text)
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+            }
+        }
+    }
 }

@@ -9,10 +9,23 @@ import SwiftUI
 
 struct PostHeaderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            HStack {
+                Image("person_2")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+
+                Text("Mike Tyson")
+                    .font(.caption)
+                    .fontWeight(.bold)
+            }
+            Spacer()
+
+            Image(systemName: "ellipsis")
+        }
+        .padding(.vertical, 12)
+        .padding(.horizontal, 8)
     }
 }
 
-#Preview {
-    PostHeaderView()
-}

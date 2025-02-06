@@ -3,22 +3,27 @@
 //  InstagramCloneSwiftUi
 //
 //  Created by Tornike Eristavi on 05.02.25.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var scrollToTopAction: () -> Void = {
+        
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                
+                TabBarView(scrollToTopAction: scrollToTopAction)
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
 }
+

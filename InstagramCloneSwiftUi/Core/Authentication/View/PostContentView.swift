@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PostContentView: View {
+    var imageUrl: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            KFImage(URL(string: imageUrl))
+                .resizable()
+                .scaledToFit()
+                .frame(width: .infinity, height: 400)
+                .clipped()
+        }
     }
 }
 
-#Preview {
-    PostContentView()
-}

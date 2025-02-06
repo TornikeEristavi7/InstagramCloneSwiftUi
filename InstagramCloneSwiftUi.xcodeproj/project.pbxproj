@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5C762A8D2D53FD320019D158 /* ImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 5C762A8C2D53FD320019D158 /* ImagePicker */; };
+		5C961FC62D54F810007070C0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5C961FC52D54F810007070C0 /* FirebaseFirestore */; };
+		5CE9AF6E2D54E36A005EA0AE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5CE9AF6D2D54E36A005EA0AE /* Kingfisher */; };
+		5CEC90492D5390EA00C24C42 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC90482D5390EA00C24C42 /* FirebaseAuth */; };
+		5CEC904D2D53912200C24C42 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC904C2D53912200C24C42 /* FirebaseFirestoreCombine-Community */; };
+		5CEC904F2D53913E00C24C42 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC904E2D53913E00C24C42 /* FirebaseStorage */; };
+		5CEC90572D53944100C24C42 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC90562D53944100C24C42 /* FirebaseAuth */; };
+		5CEC90592D53944100C24C42 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC90582D53944100C24C42 /* FirebaseFirestore */; };
+		5CEC905B2D53944100C24C42 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5CEC905A2D53944100C24C42 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5C5ACBA02D53511300896BFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,6 +41,16 @@
 		5C5ACBA92D53511300896BFA /* InstagramCloneSwiftUiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramCloneSwiftUiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5C682CA02D54CB6C00F91640 /* Exceptions for "InstagramCloneSwiftUiUITests" folder in "InstagramCloneSwiftUi" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 5C5ACB8E2D53511100896BFA /* InstagramCloneSwiftUi */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5C5ACB912D53511100896BFA /* InstagramCloneSwiftUi */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -42,6 +64,9 @@
 		};
 		5C5ACBAC2D53511300896BFA /* InstagramCloneSwiftUiUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5C682CA02D54CB6C00F91640 /* Exceptions for "InstagramCloneSwiftUiUITests" folder in "InstagramCloneSwiftUi" target */,
+			);
 			path = InstagramCloneSwiftUiUITests;
 			sourceTree = "<group>";
 		};
@@ -52,6 +77,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE9AF6E2D54E36A005EA0AE /* Kingfisher in Frameworks */,
+				5CEC904D2D53912200C24C42 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				5CEC904F2D53913E00C24C42 /* FirebaseStorage in Frameworks */,
+				5CEC90492D5390EA00C24C42 /* FirebaseAuth in Frameworks */,
+				5C762A8D2D53FD320019D158 /* ImagePicker in Frameworks */,
+				5C961FC62D54F810007070C0 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEC90572D53944100C24C42 /* FirebaseAuth in Frameworks */,
+				5CEC90592D53944100C24C42 /* FirebaseFirestore in Frameworks */,
+				5CEC905B2D53944100C24C42 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +112,7 @@
 				5C5ACB912D53511100896BFA /* InstagramCloneSwiftUi */,
 				5C5ACBA22D53511300896BFA /* InstagramCloneSwiftUiTests */,
 				5C5ACBAC2D53511300896BFA /* InstagramCloneSwiftUiUITests */,
+				5CEC90472D5390EA00C24C42 /* Frameworks */,
 				5C5ACB902D53511100896BFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +125,13 @@
 				5C5ACBA92D53511300896BFA /* InstagramCloneSwiftUiUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5CEC90472D5390EA00C24C42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +154,12 @@
 			);
 			name = InstagramCloneSwiftUi;
 			packageProductDependencies = (
+				5CEC90482D5390EA00C24C42 /* FirebaseAuth */,
+				5CEC904C2D53912200C24C42 /* FirebaseFirestoreCombine-Community */,
+				5CEC904E2D53913E00C24C42 /* FirebaseStorage */,
+				5C762A8C2D53FD320019D158 /* ImagePicker */,
+				5CE9AF6D2D54E36A005EA0AE /* Kingfisher */,
+				5C961FC52D54F810007070C0 /* FirebaseFirestore */,
 			);
 			productName = InstagramCloneSwiftUi;
 			productReference = 5C5ACB8F2D53511100896BFA /* InstagramCloneSwiftUi.app */;
@@ -135,6 +183,9 @@
 			);
 			name = InstagramCloneSwiftUiTests;
 			packageProductDependencies = (
+				5CEC90562D53944100C24C42 /* FirebaseAuth */,
+				5CEC90582D53944100C24C42 /* FirebaseFirestore */,
+				5CEC905A2D53944100C24C42 /* FirebaseStorage */,
 			);
 			productName = InstagramCloneSwiftUiTests;
 			productReference = 5C5ACB9F2D53511300896BFA /* InstagramCloneSwiftUiTests.xctest */;
@@ -195,6 +246,10 @@
 			);
 			mainGroup = 5C5ACB862D53511100896BFA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5C762A8B2D53FD230019D158 /* XCRemoteSwiftPackageReference "ImagePicker" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5C5ACB902D53511100896BFA /* Products */;
 			projectDirPath = "";
@@ -408,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.InstagramCloneSwiftUi;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.InstagramCloneSwiftUi-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -436,7 +491,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.InstagramCloneSwiftUi;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.InstagramCloneSwiftUi-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -552,6 +607,72 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C762A8B2D53FD230019D158 /* XCRemoteSwiftPackageReference "ImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hyperoslo/ImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+		5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C762A8C2D53FD320019D158 /* ImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C762A8B2D53FD230019D158 /* XCRemoteSwiftPackageReference "ImagePicker" */;
+			productName = ImagePicker;
+		};
+		5C961FC52D54F810007070C0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5CE9AF6D2D54E36A005EA0AE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Kingfisher;
+		};
+		5CEC90482D5390EA00C24C42 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5CEC904C2D53912200C24C42 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		5CEC904E2D53913E00C24C42 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		5CEC90562D53944100C24C42 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5CEC90582D53944100C24C42 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5CEC905A2D53944100C24C42 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CEC90462D5390C500C24C42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C5ACB872D53511100896BFA /* Project object */;
 }

@@ -5,11 +5,19 @@
 //  Created by Tornike Eristavi on 06.02.25.
 //
 
-
 import SwiftUI
 import Kingfisher
+import FirebaseAuth
 
 struct ProfileView: View {
+    @StateObject private var viewModel = ProfileViewModel()
+    
+    let columns = [
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1)
+    ]
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
@@ -29,8 +37,7 @@ struct ProfileView: View {
                             .foregroundColor(.gray)
 
                         HStack {
-                            Button(action: {
-                            }) {
+                            Button(action: {}) {
                                 Text("Follow")
                                     .fontWeight(.bold)
                                     .foregroundColor(.blue)
@@ -39,8 +46,7 @@ struct ProfileView: View {
                                     .background(Capsule().strokeBorder(Color.blue))
                             }
                             
-                            Button(action: {
-                            }) {
+                            Button(action: {}) {
                                 Text("Edit Profile")
                                     .fontWeight(.bold)
                                     .padding(.vertical, 6)
@@ -55,12 +61,12 @@ struct ProfileView: View {
                     Spacer()
                 }
                 .padding(.top, 20)
-                
+
                 Divider()
 
                 HStack {
                     VStack {
-                        Text("150")
+                        Text("\(viewModel.posts.count)")
                             .font(.system(size: 22, weight: .bold))
                         Text("Posts")
                             .font(.system(size: 14))
@@ -102,23 +108,20 @@ struct ProfileView: View {
 
                 Divider()
 
-                VStack {
-                    LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                        ForEach(0..<9, id: \.self) { index in
-                            KFImage(URL(string: "https://picsum.photos/200?random=\(index)"))
-                                .resizable()
-                                .scaledToFill()
-                                .frame(height: 120)
-                                .clipShape(Rectangle())
-                                .cornerRadius(6)
-                                .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.white, lineWidth: 2))
-                                .padding(2)
-                        }
+                LazyVGrid(columns: columns, spacing: 1) {
+                    ForEach(viewModel.posts) { post in
+                        KFImage(URL(string: post.imageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: UIScreen.main.bounds.width / 3 - 1, height: UIScreen.main.bounds.width / 3 - 1)
+                            .clipShape(Rectangle())
+                            .clipped()
                     }
-                    .padding(.horizontal, 10)
-                    .padding(.top, 8)
                 }
             }
+        }
+        .onAppear {
+            viewModel.loadUserPosts()
         }
         .navigationTitle("Profile")
     }

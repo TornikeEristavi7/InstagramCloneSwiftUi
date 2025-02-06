@@ -1,18 +1,24 @@
 //
-//  HomeStoriesVIew.swift
+//  HomeStoriesView.swift
 //  InstagramCloneSwiftUi
 //
 //  Created by Tornike Eristavi on 06.02.25.
 //
 
+
 import SwiftUI
 
-struct HomeStoriesVIew: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct HomeStoriesView: View {
+    @StateObject private var viewModel = StoryViewModel()
 
-#Preview {
-    HomeStoriesVIew()
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(viewModel.stories) { story in
+                    StoryView(imageUrl: story.imageUrl, name: story.name) 
+                }
+            }
+            .padding()
+        }
+    }
 }

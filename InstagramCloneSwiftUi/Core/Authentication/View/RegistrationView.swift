@@ -4,6 +4,7 @@
 //
 //  Created by Tornike Eristavi on 05.02.25.
 //
+
 import SwiftUI
 import FirebaseAuth
 
@@ -38,16 +39,13 @@ struct RegistrationView: View {
                           placeholder: "Enter your password",
                           isSecureField: true)
                     .keyboardType(.default)
-                    .textContentType(.oneTimeCode) // Prevents strong password suggestion
-
+                    .textContentType(.oneTimeCode)
                 InputView(text: $confirmPassword,
                           Title: "Confirm Password",
                           placeholder: "Confirm your password",
                           isSecureField: true)
                     .keyboardType(.default)
-                    .textContentType(.oneTimeCode) // Prevents strong password suggestion
- // Ensures correct keyboard behavior
-
+                    .textContentType(.oneTimeCode)
             }
             .padding(.horizontal)
             .padding(.top, 12)
@@ -101,8 +99,7 @@ struct RegistrationView: View {
         
         do {
             let _ = try await Auth.auth().createUser(withEmail: email, password: password)
-            // After signup, navigate to LoginView
-            dismiss() // Dismiss the RegistrationView and return to LoginView
+            dismiss()
         } catch {
             errorMessage = "Failed to create account: \(error.localizedDescription)"
         }
